@@ -4,7 +4,7 @@ package javaapplication13;
 
 public class BackupController {
     
-    private int lastSync;
+    private long lastSync;
     private boolean isMaster;
     private boolean isSyncing;
     
@@ -16,7 +16,8 @@ public class BackupController {
     }
     
     //*********************************************
-    private void autoSync(){
-        
+    private void autoSync() {
+        this.lastSync = System.currentTimeMillis();
+        System.out.println("Synced");
     }
 }
