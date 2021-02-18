@@ -1,11 +1,10 @@
-
+import java.util.*;
 
 public class Person {
-
-  public int id
-  private boolean isSelf
-  private String[] name
-  LinkedList <Integer> photos
+  public int id;
+  private boolean isSelf;
+  private String[] name;
+  LinkedList <Integer> photos;
 
   public Person(int idInput, boolean isSelfInput, String[] nameInput) {
     id = idInput;
@@ -15,18 +14,18 @@ public class Person {
   }
 
   public void setName(String[] name) {
-    this.name = name ;
+    this.name = name;
   }
 
   public String[] getName() {
-    return this.name ;
+    return this.name;
   }
 
-  public static void addPhoto(int photoId) {
+  public void addPhoto(int photoId) {
     this.photos.add(photoId);
   }
 
-  public static void removePhoto(int photoId){
+  public void removePhoto(int photoId){
     this.photos.remove(photoId);
   }
 }
